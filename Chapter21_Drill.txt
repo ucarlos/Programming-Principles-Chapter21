@@ -1,0 +1,11 @@
+Steak 0 7.99
+Cheese 1 2.99
+Ramen 2 3.99
+Wine 3 9.99
+Beer 4 1.99
+Sake 5 12.99
+Ham 6 3.99
+Chips 7 2.99
+Milk 8 1.99
+Sprite 9 2.99
+Bread 10 2.99

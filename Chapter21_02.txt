@@ -1,0 +1,307 @@
+/*
+ * -----------------------------------------------------------------------------
+ * Created by Ulysses Carlos on 05/28/2020 at 11:22 PM
+ * 
+ * Chapter21_02.txt
+ *
+ * Find a reliable source of STL documentation and list every standard library
+ * algorithm
+ * -----------------------------------------------------------------------------
+ */
+
+
+<algorithm>(3)                  C++ Programmer´s Manual                  <algorithm>(3)
+
+
+
+NAME
+       <algorithm> - Standard Template Library: Algorithms
+
+TYPE
+       library
+
+SYNOPSIS
+       #include <algorithm>
+
+
+DESCRIPTION
+       The  header <algorithm> defines a collection of functions especially designed to
+       be used on ranges of elements.
+       A range is any sequence of objects that can be  accessed  through  iterators  or
+       pointers,  such as an array or an instance of some of the STL containers. Notice
+       though, that algorithms operate through iterators directly on  the  values,  not
+       affecting  in  any way the structure of any possible container (it never affects
+       the size or storage allocation of the container).
+
+FUNCTIONS IN <ALGORITHM>
+   Non-modifying sequence operations
+       all_of(3) [C++11 only]
+              Test condition on all elements in range  (function template)
+
+       any_of(3) [C++11 only]
+              Test if any element in range fulfills condition  (function template)
+
+       none_of(3) [C++11 only]
+              Test if no elements fulfill condition  (function template)
+
+       for_each(3)
+              Apply function to range  (function template)
+
+       find(3)
+              Find value in range  (function template)
+
+       find_if(3)
+              Find element in range  (function template)
+
+       find_if_not(3) [C++11 only]
+              Find element in range (negative condition)  (function template)
+
+       find_end(3)
+              Find last subsequence in range  (function template)
+
+       find_first_of(3)
+              Find element from set in range  (function template)
+
+       adjacent_find(3)
+              Find equal adjacent elements in range  (function template)
+
+       count(3)
+              Count appearances of value in range  (function template)
+
+       count_if(3)
+              Return number of elements in range satisfying condition   (function  tem‐
+              plate)
+
+       mismatch(3)
+              Return first position where two ranges differ  (function template)
+
+       equal(3)
+              Test whether the elements in two ranges are equal  (function template)
+
+       is_permutation(3) [C++11 only]
+              Test whether range is permutation of another  (function template)
+
+       search(3)
+              Search range for subsequence  (function template)
+
+       search_n(3)
+              Search range for elements  (function template)
+
+   Modifying sequence operations
+       copy(3)
+              Copy range of elements  (function template)
+
+       copy_n(3) [C++11 only]
+              Copy elements  (function template)
+
+       copy_if(3) [C++11 only]
+              Copy certain elements of range  (function template)
+
+       copy_backward(3)
+              Copy range of elements backward  (function template)
+
+       move(3) [C++11 only]
+              Move range of elements  (function template)
+
+       move_backward(3) [C++11 only]
+              Move range of elements backward  (function template)
+
+       swap(3)
+              Exchange values of two objects  (function template)
+
+       swap_ranges(3)
+              Exchange values of two ranges  (function template)
+
+       iter_swap(3)
+              Exchange  values  of  objects pointed to by two iterators  (function tem‐
+              plate)
+
+       transform(3)
+              Transform range  (function template)
+
+       replace(3)
+              Replace value in range  (function template)
+
+       replace_if(3)
+              Replace values in range  (function template)
+
+       replace_copy(3)
+              Copy range replacing value  (function template)
+
+       replace_copy_if(3)
+              Copy range replacing value  (function template)
+
+       fill(3)
+              Fill range with value  (function template)
+
+       fill_n(3)
+              Fill sequence with value  (function template)
+
+       generate(3)
+              Generate values for range with function  (function template)
+
+       generate_n(3)
+              Generate values for sequence with function  (function template)
+
+       remove(3)
+              Remove value from range  (function template)
+
+       remove_if(3)
+              Remove elements from range  (function template)
+
+       remove_copy(3)
+              Copy range removing value  (function template)
+
+       remove_copy_if(3)
+              Copy range removing values  (function template)
+
+       unique(3)
+              Remove consecutive duplicates in range  (function template)
+
+       unique_copy(3)
+              Copy range removing duplicates  (function template)
+
+       reverse(3)
+              Reverse range  (function template)
+
+       reverse_copy(3)
+              Copy range reversed  (function template)
+
+       rotate(3)
+              Rotate left the elements in range  (function template)
+
+       rotate_copy(3)
+              Copy range rotated left  (function template)
+
+       random_shuffle(3)
+              Randomly rearrange elements in range  (function template)
+
+       shuffle(3) [C++11 only]
+              Randomly rearrange elements in range using generator  (function template)
+
+   Partitions
+       is_partitioned(3) [C++11 only]
+              Test whether range is partitioned  (function template)
+
+       partition(3)
+              Partition range in two  (function template)
+
+       stable_partition(3)
+              Partition range in two - stable ordering  (function template)
+
+       partition_copy(3) [C++11 only]
+              Partition range into two  (function template)
+
+       partition_point(3) [C++11 only]
+              Get partition point  (function template)
+
+   Sorting
+       sort(3)
+              Sort elements in range  (function template)
+
+       stable_sort(3)
+              Sort elements preserving order of equivalents  (function template)
+
+       partial_sort(3)
+              Partially sort elements in range  (function template)
+
+       partial_sort_copy(3)
+              Copy and partially sort range  (function template)
+
+       is_sorted(3) [C++11 only]
+              Check whether range is sorted  (function template)
+
+       is_sorted_until(3) [C++11 only]
+              Find first unsorted element in range  (function template)
+
+       nth_element(3)
+              Sort element in range  (function template)
+              Binary search (operating on partitioned/sorted ranges):
+
+       lower_bound(3)
+              Return iterator to lower bound  (function template)
+
+       upper_bound(3)
+              Return iterator to upper bound  (function template)
+
+       equal_range(3)
+              Get subrange of equal elements  (function template)
+
+       binary_search(3)
+              Test if value exists in sorted sequence  (function template)
+              Merge (operating on sorted ranges):
+
+       merge(3)
+              Merge sorted ranges  (function template)
+
+       inplace_merge(3)
+              Merge consecutive sorted ranges  (function template)
+
+       includes(3)
+              Test whether sorted range includes another sorted range   (function  tem‐
+              plate)
+
+       set_union(3)
+              Union of two sorted ranges  (function template)
+
+       set_intersection(3)
+              Intersection of two sorted ranges  (function template)
+
+       set_difference(3)
+              Difference of two sorted ranges  (function template)
+
+       set_symmetric_difference(3)
+              Symmetric difference of two sorted ranges  (function template)
+
+   Heap
+       push_heap(3)
+              Push element into heap range  (function template)
+
+       pop_heap(3)
+              Pop element from heap range  (function template)
+
+       make_heap(3)
+              Make heap from range  (function template)
+
+       sort_heap(3)
+              Sort elements of heap  (function template)
+
+       is_heap(3) [C++11 only]
+              Test if range is heap  (function template)
+
+       is_heap_until(3) [C++11 only]
+              Find first element not in heap order  (function template)
+
+   Min/max
+       min(3) Return the smallest  (function template)
+
+       max(3) Return the largest  (function template)
+
+       minmax(3) [C++11 only]
+              Return smallest and largest elements  (function template)
+
+       min_element(3)
+              Return smallest element in range  (function template)
+
+       max_element(3)
+              Return largest element in range  (function template)
+
+       minmax_element(3) [C++11 only]
+              Return smallest and largest elements in range  (function template)
+
+   Other
+       lexicographical_compare(3)
+              Lexicographical less-than comparison  (function template)
+
+       next_permutation(3)
+              Transform range to next permutation  (function template)
+
+       prev_permutation(3)
+              Transform range to previous permutation  (function template)
+
+REFERENCE
+       cplusplus.com, 2000-2015 - All rights reserved.
+
+
+
+cplusplus.com                          2019-10-10                        <algorithm>(3)

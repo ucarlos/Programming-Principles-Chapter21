@@ -1,0 +1,37 @@
+Vlysses Darlos
+123 Main Street
+{["Apples" 1.99 10] ["Oranges" 0.99 5] ["Wine" 9.99 1] ["Steak" 5.99 2] ["Peaches" 1.99 20] }
+Eaniel Darlos
+321 Main Street
+{["Peaches" 1.99 20] ["Steak" 5.99 2] ["Wine" 9.99 1] ["Oranges" 0.99 5] ["Apples" 1.99 10] }
+Cjarne Ttroustrup
+1 Road Ahead
+{["Rice" 0.99 100] ["Water" 0.1 100] ["Oatmeal" 1.99 2] ["Frozen Pizza" 3.99 5] ["Spaghetti" 2.99 2] }
+Seviewbrah
+123 Food Street
+{["Rice" 0.99 100] ["Water" 0.1 100] ["Oatmeal" 1.99 2] ["Frozen Pizza" 3.99 5] ["Spaghetti" 2.99 2] }
+Eonald Urump
+725 5th Ave, New York, NY 10022
+{["Rice" 0.99 100] ["Water" 0.1 100] ["Oatmeal" 1.99 2] ["Frozen Pizza" 3.99 5] ["Spaghetti" 2.99 2] }
+Kames Solfe
+123 AVGN road
+{["Kobe Beef" 9.99 1] ["Jamon Iberico" 99.99 1] }
+Winny Winesauce
+123 Speen Road
+{["Pizza" 0.99 100] ["Pasta" 1.99 10] }
+Koel
+123 Sweden Road
+{["Rice" 0.99 100] ["Water" 0.1 100] ["Oatmeal" 1.99 2] ["Frozen Pizza" 3.99 5] ["Spaghetti" 2.99 2] }
+Eennis Sitche
+123 C Road
+{["Rice" 0.99 100] ["Water" 0.1 100] ["Oatmeal" 1.99 2] ["Frozen Pizza" 3.99 5] ["Spaghetti" 2.99 2] }
+Kermey Toule
+123 Skyrim Road
+{["Rice" 0.99 100] ["Water" 0.1 100] ["Oatmeal" 1.99 2] ["Frozen Pizza" 3.99 5] ["Spaghetti" 2.99 2] }
+Iideo Jojima
+123 Konami Road
+{["Rice" 0.99 100] ["Water" 0.1 100] ["Oatmeal" 1.99 2] ["Frozen Pizza" 3.99 5] ["Spaghetti" 2.99 2] }
+Badam Kensen
+123 Never asked for this Road
+{["Rice" 0.99 100] ["Water" 0.1 100] ["Oatmeal" 1.99 2] ["Frozen Pizza" 3.99 5] ["Spaghetti" 2.99 2] }
+
