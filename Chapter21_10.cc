@@ -50,11 +50,11 @@ istream& operator>>(istream &is, Purchase &p){
 
 	// If ch isn't [, then throw an error.
     if (ch != '[')
-	throw runtime_error("Purchase does not start with an \"[\".");
+		throw runtime_error("Purchase does not start with an \"[\".");
     // next char should be \", it's fine if it isn't.
     is >> ch;
     if (ch != '\"')
-	throw runtime_error("Product name should start with an \"");
+		throw runtime_error("Product name should start with an \"");
 
     // Read the rest of the string.
     getline(is, str, '\"');
@@ -81,8 +81,8 @@ istream& operator>>(istream &is, Purchase &p){
 
 ostream& operator<<(ostream &os, Purchase &p){
     return os << "[" << "\"" << p.product_name << "\" "
-	      << p.unit_price << " " << p.quantity
-	      << "]";
+			  << p.unit_price << " " << p.quantity
+			  << "]";
 	
 }
 
@@ -90,7 +90,7 @@ class Order{
 public:
     Order()=default;
     Order(string cus, string add, vector<Purchase> &data):
-	customer_name{cus}, address{add} { this->data = data; }
+		customer_name{cus}, address{add} { this->data = data; }
     
     string get_name() const { return customer_name; }
     void set_name(string &v) { customer_name = v; }
@@ -111,7 +111,7 @@ private:
 
 double sum_order(double val, const Order &o){
     for (auto &i : o.get_data())
-	val += (i.unit_price * i.quantity);
+		val += (i.unit_price * i.quantity);
     
     return val;
 }
@@ -134,19 +134,19 @@ istream& operator>>(istream &is, Order &o){
     	return is;
     // Data must start with {
     if (ch != '{')
-	throw runtime_error("Purchase vector must start with \"{\"");
+		throw runtime_error("Purchase vector must start with \"{\"");
 
     Purchase p;
 
     for (ch; is >> ch;){
     	if (ch == '}') {
-	    is.unget();
-	    break;
-	}
+			is.unget();
+			break;
+		}
 
     	is.unget();
     	is >> p;
-	datum.push_back(Purchase{p});
+		datum.push_back(Purchase{p});
     }
 
     // Now make sure data ends with }
@@ -166,11 +166,11 @@ istream& operator>>(istream &is, Order &o){
 ostream& operator<<(ostream &os, Order &p){
     ostringstream oss;
     oss << p.get_name() << endl
-	      << p.get_address() << endl
-	<< "{ ";
+		<< p.get_address() << endl
+		<< "{ ";
     
     for (auto &i : p.get_data())
-	oss << i << " ";
+		oss << i << " ";
     
     oss << "}";
 
@@ -237,8 +237,8 @@ void generate_file(void){
 
 	// Another one
 	vector<Purchase> vec1 = {Purchase{"Rice", 0.99, 100}, Purchase{"Water", 0.10, 100},
-							 Purchase{"Oatmeal", 1.99, 2}, Purchase{"Frozen Pizza", 3.99, 5},
-							 Purchase{"Spaghetti", 2.99, 2}};
+		Purchase{"Oatmeal", 1.99, 2}, Purchase{"Frozen Pizza", 3.99, 5},
+		Purchase{"Spaghetti", 2.99, 2}};
 	vo.push_back(Order{"Bjarne Stroustrup", "1 Road Ahead", vec1});
 	vo.push_back(Order{"Reviewbrah", "123 Food Street", vec1});
 	vo.push_back(Order{"Donald Trump", "725 5th Ave, New York, NY 10022", vec1});
@@ -266,7 +266,7 @@ int main(void){
 
     // Sort vector by customer name:
     sort(vo.begin(), vo.end(),
-	 [](const Order &a, const Order &b) { return a.get_name() < b.get_name();});
+		 [](const Order &a, const Order &b) { return a.get_name() < b.get_name();});
     ofstream ofs1{copy_path, ios_base::trunc};
     write_orders_to_file(ofs1, vo);
 
@@ -288,7 +288,7 @@ int main(void){
     vector<Order> vf{vo.size() + lo.size()};
 
     std::merge(vo.begin(), vo.end(), lo.begin(), lo.end(), vf.begin(),
-	       [](const Order &a, const Order &b){ return a.get_name() < b.get_name();});
+			   [](const Order &a, const Order &b){ return a.get_name() < b.get_name();});
 
     // Now write to file:
     write_orders_to_file(final, vf);

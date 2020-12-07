@@ -19,7 +19,7 @@ void read_to_msi(map<string, int> &msi, int amount){
     string temp_string;
     
     for (int i = 0; i < amount && (cin >> temp_string >> temp_int); i++){
-	msi[temp_string] = temp_int;
+		msi[temp_string] = temp_int;
     }
 
 }
@@ -41,7 +41,7 @@ int main(void){
 
     // Output the (name, value) pairs to cout in some format of your choice.
     for (auto &i : msi)
-	cout << "Item: " << i.first << "\tValue: " << i.second << endl;
+		cout << "Item: " << i.first << "\tValue: " << i.second << endl;
     
     // Erase the (name, values pairs from msi:
     msi.erase("book");
@@ -53,23 +53,23 @@ int main(void){
     read_to_msi(msi, 10);
     // Write the elements of msi to cout.
     for (auto &i : msi)
-	cout << "Item': " << i.first << "\tValue: " << i.second << endl;
+		cout << "Item': " << i.first << "\tValue: " << i.second << endl;
     
     // Output the sum of the integer values in msi
     int val{0};
     val = accumulate(msi.begin(), msi.end(), val,
-		     [](int value, const map<string, int>::value_type& p){ return value + p.second; });
+					 [](int value, const map<string, int>::value_type& p){ return value + p.second; });
     cout << "Result: " << val << endl;
     // Define a map<int, string> called mis
     map<int, string> mis;
     // Enter the values from msi into mis; that is, if msi has an element
     // ("lecture", 21), mis should have an element (21, "lecture")
     for (auto &i : msi)
-	mis[i.second] = i.first;
+		mis[i.second] = i.first;
 
     // Output the elements of mis to cout.
     cout << "mis Output: " << endl;
     for (auto &i : mis)
-	cout << "First: " << i.first << "\tSecond: " << i.second << endl;
+		cout << "First: " << i.first << "\tSecond: " << i.second << endl;
     
 }

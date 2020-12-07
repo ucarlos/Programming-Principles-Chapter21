@@ -17,20 +17,20 @@ using namespace std;
 
 int main(void){
     unordered_map<string, double> shopping_cart = {{"Steak", 8.99},
-						 {"Ramen Pack", 4.99},
-						 {"Soda Water", 0.99},
-						 {"Wine", 9.99}};
+												   {"Ramen Pack", 4.99},
+												   {"Soda Water", 0.99},
+												   {"Wine", 9.99}};
 
     cout << "Inserting Doritos and Mountain Dew into the cart.\n";
     shopping_cart.insert({"Doritos", 2.99});
     shopping_cart.insert({"Mountain Dew", 1.99});
     
     for (auto &v : shopping_cart)
-	cout << v.first << "\t" << v.second << endl;
+		cout << v.first << "\t" << v.second << endl;
 
     shopping_cart.erase({"Wine"});
 
     cout << "After removing Wine..." << endl;
     for (auto &v : shopping_cart)
-	cout << v.first << "\t" << v.second << endl;
+		cout << v.first << "\t" << v.second << endl;
 }

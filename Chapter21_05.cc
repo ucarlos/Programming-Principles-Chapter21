@@ -23,12 +23,12 @@ using namespace std;
 
 template<typename InputIterator, typename T>
 InputIterator* my_find(InputIterator first,
-		      InputIterator last, const T &item){
+					   InputIterator last, const T &item){
 
     while (first != last){
-	if ((*first) == item)
-	    return &first;
-	first++;    }
+		if ((*first) == item)
+			return &first;
+		first++;    }
     
     // If item is not found in range, return nullptr?
     return nullptr;
@@ -38,13 +38,13 @@ InputIterator* my_find(InputIterator first,
 template<typename InputIterator, typename T>
 typename iterator_traits<InputIterator>::difference_type
 my_count(InputIterator first, InputIterator last,
-	 const T &item){
+		 const T &item){
     typename iterator_traits<InputIterator>::difference_type sum = 0;
 
     typename iterator_traits<InputIterator>::difference_type range = (last - first);
 
     for (auto i = first; i < range; i++)
-	if ((*i) == item) sum++;
+		if ((*i) == item) sum++;
 
     return sum;
 }

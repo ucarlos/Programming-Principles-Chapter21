@@ -30,7 +30,7 @@ int main(void){
     ifstream ifs{file_path, ios_base::in};
     
     for (string s; ifs >> s;)
-	words[s]++;
+		words[s]++;
 
     cout << "Initial Map:" << endl;
     for (auto &i : words)

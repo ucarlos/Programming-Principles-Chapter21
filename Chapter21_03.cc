@@ -23,10 +23,10 @@ typename iterator_traits<InputIterator>::difference_type
 count(InputIterator first, InputIterator last, const T& val){
     typename iterator_traits<InputIterator>::difference_type sum = 0;
     while (first != last){
-	if (*first == val)
-	    sum++;
+		if (*first == val)
+			sum++;
 	
-	first++;
+		first++;
     }
 
     return sum;

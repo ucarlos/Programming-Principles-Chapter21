@@ -26,14 +26,14 @@ vector<int>::iterator binary_search_vec(vector<int> &vec, int &item){
     auto high = vec.end() - vec.begin();
     
     while (low <= high){
-	auto mid = (high + low) / 2;
-	if (vec[mid] == item)
-	    return (vec.begin() + mid);
-	else if (vec[mid] < item){ // Item is greater than mid
-	    low = mid + 1;
-	}
-	else
-	    high = mid - 1;
+		auto mid = (high + low) / 2;
+		if (vec[mid] == item)
+			return (vec.begin() + mid);
+		else if (vec[mid] < item){ // Item is greater than mid
+			low = mid + 1;
+		}
+		else
+			high = mid - 1;
 
     }
 
@@ -50,22 +50,22 @@ list<string>::iterator binary_search_str(list<string> &ls, string &item){
     auto range = distance(low, high);
     while (distance(low, ls.begin()) <= distance(high, ls.end())){
 	
-	// copy of low:
-	auto mid = low;
-	advance(mid, range / 2);
+		// copy of low:
+		auto mid = low;
+		advance(mid, range / 2);
 
-	if (*mid == item)
-	    return mid;
-	else if ((*mid) < item){
-	    low = mid;
-	    low++;
-	}
-	else {
-	    high = mid;
-	    high--;
-	}
+		if (*mid == item)
+			return mid;
+		else if ((*mid) < item){
+			low = mid;
+			low++;
+		}
+		else {
+			high = mid;
+			high--;
+		}
 
-	range = distance(low, high);
+		range = distance(low, high);
     }
 
     // If not found
@@ -75,7 +75,7 @@ list<string>::iterator binary_search_str(list<string> &ls, string &item){
 int main(void){
     vector<int> vi;
     for (int i = 50; i >= 0; i--)
-	vi.push_back(i);
+		vi.push_back(i);
 
     //Sort array
     sort(vi.begin(), vi.end());
@@ -92,8 +92,8 @@ int main(void){
 
     cout << "As for the List Binary Search:" << endl;
     list<string> ls = {"what", "the", "fuck", "did", "you",
-		       "just", "fucking", "say", "about",
-		       "me", "you", "little", "bitch"};
+		"just", "fucking", "say", "about",
+		"me", "you", "little", "bitch"};
     string str = "did";
     // First sort the list:
     ls.sort();
@@ -103,10 +103,10 @@ int main(void){
     auto ls_result0 = binary_search_str(ls, str);
 
     if (ls_result0 == ls.end())
-	cout << "Result not found.\n";
+		cout << "Result not found.\n";
     else
-	cout << *ls_result0 << " was found at index "
-	     << distance(ls.begin(), ls_result0);
+		cout << *ls_result0 << " was found at index "
+			 << distance(ls.begin(), ls_result0);
     
     
 		       

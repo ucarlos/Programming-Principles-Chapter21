@@ -1,4 +1,4 @@
- /*
+/*
  * -----------------------------------------------------------------------------
  * Created by Ulysses Carlos on 05/29/2020 at 05:10 PM
  * 
@@ -28,7 +28,7 @@ struct Fruit{
     double unit_price;
     
     explicit Fruit(string n, int c, double up) :
-	name{n}, count{c}, unit_price{up} { }
+		name{n}, count{c}, unit_price{up} { }
     
     friend ostream& operator<<(ostream &os, Fruit &f);
 
@@ -36,12 +36,12 @@ struct Fruit{
 
 ostream& operator<<(ostream &os, Fruit &f) {
 	return os << "Fruit Name: " << f.name << "\tQuantity: "
-	<< f.count << "\tPrice: " << f.unit_price;
+			  << f.count << "\tPrice: " << f.unit_price;
 }
 
 struct Fruit_Comparison{
     bool operator()(const Fruit *a, const Fruit *b) const{
-	return (a->name < b->name);
+		return (a->name < b->name);
     }
 };
 

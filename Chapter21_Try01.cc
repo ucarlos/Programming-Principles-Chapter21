@@ -34,16 +34,18 @@ double price_fun(double v, const Record&r){
 
 int main(void){
     std::vector<Record> vec = {Record{15.65, 4}, Record{42.69, 16},
-			       Record{1.99, 15}, Record{20.20, 5}};
+		Record{1.99, 15}, Record{20.20, 5}};
 
     for (auto i : vec)
-	cout << i << endl;
+		cout << i << endl;
     
     double total = 0;
+    // Normal function pointer version
+    // total = accumulate(vec.begin(), vec.end(), total, price_fun);
 
-    //total = accumulate(vec.begin(), vec.end(), total, price_fun);
+    // Lambda function version:
     total = accumulate(vec.begin(), vec.end(), total,
-		       [](double v, const Record &r) {return v + r.unit_price * r.units;});
+					   [](double v, const Record &r) {return v + r.unit_price * r.units;});
 
     cout << "Total is $" << total << endl;
 }

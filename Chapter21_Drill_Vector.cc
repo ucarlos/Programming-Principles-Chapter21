@@ -24,7 +24,7 @@ struct Item {
 
     Item(string n, int idd, double val) : name{n}, id{idd}, value{val} { }
     friend ostream& operator<<(ostream &os, const Item &i){
-	return os << "(ID " << i.id << ") " << i.name << " " << i.value;
+		return os << "(ID " << i.id << ") " << i.name << " " << i.value;
     }
     
 };
@@ -36,12 +36,12 @@ struct Find_Item{
 
 template<typename T> void print_vector(vector<T> &vec){
     for (const T &i : vec)
-	cout << i << endl;
+		cout << i << endl;
 }
 
 template<typename T> void print_list(list<T> &l){
     for (const T &i : l)
-	cout << i << endl;
+		cout << i << endl;
 }
 
 int main(void){
@@ -56,8 +56,8 @@ int main(void){
     // Define a struct Item { string name; int iid; double value; /* . . . */ }; , make
     // a vector<Item> , vi , and fill it with ten items from a file.
     for (int i = 0; i < 10; i++){
-	ifs >> temp_str >> temp_id >> temp_val;
-	vi.push_back(Item{temp_str, temp_id, temp_val});
+		ifs >> temp_str >> temp_id >> temp_val;
+		vi.push_back(Item{temp_str, temp_id, temp_val});
     }
 
     // Print Original Vector:
@@ -96,11 +96,11 @@ int main(void){
     string search_name = "Horseshoe";
     auto it = find_if(vi.begin(), vi.end(), Find_Item(search_name));
     if (it != vi.end())
-	vi.erase(it);
+		vi.erase(it);
     
     it = find_if(vi.begin(), vi.end(), Find_Item("Canon S400"));
     if (it != vi.end())
-	vi.erase(it);
+		vi.erase(it);
 
     print_vector(vi);
     cout << endl;
@@ -108,11 +108,11 @@ int main(void){
     cout << "Remove (erase) two items identfied by id from vi: " << endl;
     it = find_if(vi.begin(), vi.end(), [](const Item &i){ return i.id == 10; });
     if (it != vi.end())
-	vi.erase(it);
+		vi.erase(it);
 
     it = find_if(vi.begin(), vi.end(), [](const Item &i){ return i.id == 9; });
     if (it != vi.end())
-	vi.erase(it);
+		vi.erase(it);
 
     print_vector(vi);
     cout << endl << endl;
